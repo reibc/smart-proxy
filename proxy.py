@@ -31,6 +31,7 @@ async def get_data():
         # get data from servers
         response = requests.get(f"{servers[current_server]}/data/")
         res = json.loads(response.text)
+        print(res)
         # increment current_server to use the other database on the next request
         current_server = (current_server + 1) % len(servers)
         # cache data into redis
