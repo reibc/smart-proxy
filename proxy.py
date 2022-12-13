@@ -7,7 +7,7 @@ proxy = FastAPI()
 # SERVER 1 - PORT 8000
 # SERVER 2 - PORT 8001
 # PROXY    - PORT 8002
-servers = ["https://s1-pad-lab.herokuapp.com/", "https://s2-pad-lab.herokuapp.com/"]
+servers = ["https://s1-pad-lab.herokuapp.com", "https://s2-pad-lab.herokuapp.com"]
 current_server = 0
 r = redis.Redis(host='redis-16831.c269.eu-west-1-3.ec2.cloud.redislabs.com', port=16831, password="QPnW6faQvgL5u2Cz3jcypQsVNGxaD1F4")
 def synchronize_databases(type, current_server, data):
